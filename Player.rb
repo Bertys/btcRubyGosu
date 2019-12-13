@@ -4,6 +4,7 @@ class Player
      @x = 1
      @y = 1
     @image = Gosu::Image.new(window, "./images/mine.png", true)
+    
   end
   def draw()
     @image.draw(@x, @y, 0)
