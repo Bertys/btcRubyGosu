@@ -7,6 +7,7 @@ class Player
     @beep = Gosu::Sample.new("images/beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
+    
   end
 
   def warp(x, y)
