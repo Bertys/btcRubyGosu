@@ -28,6 +28,17 @@ class Player
   end
   
   def move
+
+    if @x>630
+      @x=620
+    elsif @x<10
+      @x=20
+    elsif @y<470
+      @y=460
+    elsif @y<10
+      @y=20
+    end
+
     @x += @vel_x
     @y += @vel_y
     @x %= 640
