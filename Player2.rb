@@ -28,24 +28,30 @@ class Player
   end
   
   def move
+    puts @x
+      puts @y
 
-    if @x>630
-      @x=620
-    elsif @x<10
-      @x=20
-    elsif @y<470
-      @y=460
-    elsif @y<10
-      @y=20
+    if @x<620 && @x>20 && @y<460 && @y>20
+      @x += @vel_x
+      @y += @vel_y
+      @x %= 640
+      @y %= 480
+      
+      @vel_x *= 0.95
+      @vel_y *= 0.95
+
+      
+    elsif @x>620
+      @x=619
+    elsif @x<20
+      @x=21
+    elsif @y>460
+      @y=459
+    elsif @y<20
+      @y=21
+    else
+      # puts "balalal"
     end
-
-    @x += @vel_x
-    @y += @vel_y
-    @x %= 640
-    @y %= 480
-    
-    @vel_x *= 0.95
-    @vel_y *= 0.95
   end
 
   def draw
